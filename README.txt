@@ -1,0 +1,6 @@
+a.	What is unit testing, how is it implemented, and why is it important?
+b.	What is functional testing, how is it implemented, and why is it important?
+c.	What is the significance and usage of automated unit testing in software development?
+d.	Where would you commonly find automated unit testing implemented?  Can you find any documentation online that describes this and post a link to it?
+e.	 What is test driven development and how can it improve the management and quality of software projects.
+
