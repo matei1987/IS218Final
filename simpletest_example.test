@@ -142,5 +142,23 @@ class SimpletestUnitTestExampleTestCase extends DrupalUnitTestCase {
     $result = simpletest_example_empty_mysql_date(date('Y-m-d'));
     $message = 'A valid date should return FALSE.';
     $this->assertFalse($result, $message);
-  }
+
+    $time = simpletest_example_empty_mysql_time(NULL);
+    $message = 'If you see this, it is NULL.';
+    $this->assertTrue($time,$message); 
+
+    $time = simpletest_example_empty_mysql_time('');
+    $message = 'Empty string be returnin TRUE';
+    $this->assertTrue($time,$message); 
+
+    $time = simpletest_example_empty_mysql_time("00:00:00 AM");
+    $message = 'An empty MySQL TIME should return TRUE';
+    $this->assertTrue($time,$message);
+
+    $time = simpletest_example_empty_mysql_time("00:00:00 PM");
+    $message = 'An empty MySQL TIME should return TRUE';
+    $this->assertTrue($time,$message);
+
+    
+      }
 }

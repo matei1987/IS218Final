@@ -126,6 +126,14 @@ function simpletest_example_empty_mysql_date($date_string) {
   return false;
 }
 
+function simpletest_example_empty_mysql_time($time_string) {
+  if (empty($time_string) || $time_string == '00:00:00 AM' || $time_string == '00:00:00 PM') {
+    return true;
+  }
+  return false;
+}
+
+
 /**
  * @} End of "defgroup simpletest_example".
  */
