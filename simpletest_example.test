@@ -159,6 +159,20 @@ class SimpletestUnitTestExampleTestCase extends DrupalUnitTestCase {
     $message = 'An empty MySQL TIME should return TRUE';
     $this->assertTrue($time,$message);
 
+    $string = simpletest_example_empty_mysql_string('');
+    $message = 'An empty String should return FALSE';
+    $this->assertFalse($string,$message);
     
+    $string = simpletest_example_empty_mysql_string('Hello');
+    $message = 'Hello should assert FALSE';
+    $this->assertFalse($string,$message);
+
+    $string = simpletest_example_empty_mysql_string('World');
+    $message = 'World should assert FALSE';
+    $this->assertFalse($string,$message);
+
+    $string = simpletest_example_empty_mysql_string(NULL);
+    $message = 'NULL should return FALSE';
+    $this->assertFalse($string,$message);
       }
 }
